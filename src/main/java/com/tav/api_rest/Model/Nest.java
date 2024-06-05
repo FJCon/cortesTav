@@ -26,8 +26,9 @@ public class Nest {
     private List<ChangesPart> changes;
 
 */
-    @OneToMany(mappedBy = "nest")
-    private List<Job> job;
+    @ManyToOne
+    @JoinColumn(name = "JobRef")
+    private Job job;
 /*
     private List<Part> part;
 

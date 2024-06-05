@@ -1,0 +1,12 @@
+Estoy feliz de compartir que empecé el desarrollo de una pequeña aplicación para solucionar una problematica en la empresa en la que trabajo.
+
+
+
+El objetivo es controlar el estado de piezas metálicas en el proceso de corte láser.
+
+La aplicación se integra con la base de datos SQL Server que almacena la información de las piezas, creada por el software de corte "Lantek Expert", utilizando una API REST con Java Spring Boot. De esta manera, se obtiene información en tiempo real sobre el estado de cada pieza.
+
+
+¡Seguiré actualizando!
+
+¿Qué opinan?

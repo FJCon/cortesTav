@@ -22,8 +22,7 @@ public class Job {
     @Column(name = "JobName")
     private String info;
 
-    @ManyToOne
-    @JoinColumn(name = "JobRef")
+    @OneToMany(mappedBy = "job")
     private Nest nest;
 
 }

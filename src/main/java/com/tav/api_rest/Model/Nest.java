@@ -20,7 +20,7 @@ public class Nest {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CNC") // Assuming CNC is a unique identifier
     private String cnc;
-
+    
     @ManyToOne
     @JoinColumn(name = "JobRef", referencedColumnName = "jobRef") // Ensure it references the correct column
     @JsonBackReference

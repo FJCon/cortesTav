@@ -31,5 +31,6 @@ public class Job {
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Nest> nests;
+
 }
 

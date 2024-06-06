@@ -1,5 +1,6 @@
 package com.tav.api_rest.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,21 +18,13 @@ public class Nest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "RecID")
-    private Integer id;
-
+    @Column(name = "CNC") // Assuming CNC is a unique identifier
     private String cnc;
 
-    /*
-    private List<ChangesPart> changes;
-
-*/
-    @OneToMany(mappedBy = "nest")
-    private List<Job> job;
-/*
-    private List<Part> part;
-
-    */
+    @ManyToOne
+    @JoinColumn(name = "JobRef", referencedColumnName = "jobRef") // Ensure it references the correct column
+    @JsonBackReference
+    private Job job;
 
     @Column(name = "SThickness")
     private Float thickness;
@@ -47,8 +40,4 @@ public class Nest {
 
     @Column(name = "UData3")
     private String data3;
-
-
-
-
 }

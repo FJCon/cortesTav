@@ -28,7 +28,7 @@ public class NestController {
     }
 
     @GetMapping("/cnc/{id}")
-    public ResponseEntity<Nest> buscarPorCnc(@PathVariable String cnc){
-        return ResponseEntity.ok(nstServ.findByID(cnc));
+    public ResponseEntity<Nest> buscarPorCnc(@PathVariable String id){
+        return ResponseEntity.ok(nstServ.findByCnc(id));
     }
 }

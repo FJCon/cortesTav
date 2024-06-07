@@ -4,9 +4,7 @@ import com.tav.api_rest.Model.Job;
 import com.tav.api_rest.Services.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +22,10 @@ public class JobController {
     @GetMapping
     public ResponseEntity<List<Job>> listarTrabajos(){
         return ResponseEntity.ok(jobServ.listJobs());
+    }
+
+    @GetMapping("/job/{cnc}")
+    public Job getJobByNestCnc(@PathVariable String cnc) {
+        return jobServ.findJob(cnc);
     }
 }

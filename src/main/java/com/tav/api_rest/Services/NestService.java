@@ -21,7 +21,7 @@ public class NestService {
         return nstRepo.findAll();
     }
 
-    public Nest findByID(String cnc){
+    public Nest findByCnc(String cnc){
         return nstRepo.findByCnc(cnc);
     }
 }

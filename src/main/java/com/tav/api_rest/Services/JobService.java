@@ -23,4 +23,8 @@ public class JobService {
         return jobRepo.findAll();
     }
 
+    public Job findJob(String cnc){
+        return jobRepo.findJobByNestCnc(cnc);
+    }
+
 }

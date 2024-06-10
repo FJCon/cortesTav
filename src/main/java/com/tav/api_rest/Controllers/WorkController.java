@@ -1,7 +1,7 @@
 package com.tav.api_rest.Controllers;
 
-import com.tav.api_rest.Model.Obra;
-import com.tav.api_rest.Services.ObraService;
+import com.tav.api_rest.Model.Work;
+import com.tav.api_rest.Services.WorkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,17 +12,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/works")
-public class ObraController {
+public class WorkController {
 
-    public ObraService obraServ;
+    public WorkService obraServ;
 
     @Autowired
-    public ObraController(ObraService obraServ) {
+    public WorkController(WorkService obraServ) {
         this.obraServ = obraServ;
     }
 
     @GetMapping
-    public ResponseEntity<List<Obra>> listarObras(){
+    public ResponseEntity<List<Work>> listarObras(){
         return ResponseEntity.ok(obraServ.findAll());
     }
 }

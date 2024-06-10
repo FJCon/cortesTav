@@ -1,7 +1,7 @@
 package com.tav.api_rest.Services;
 
-import com.tav.api_rest.Model.Obra;
-import com.tav.api_rest.Repositories.ObraRepository;
+import com.tav.api_rest.Model.Work;
+import com.tav.api_rest.Repositories.WorkRepository;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +12,15 @@ import java.util.List;
 @Service
 @NoArgsConstructor
 @Data
-public class ObraService {
-    private ObraRepository obraRepo;
+public class WorkService {
+    private WorkRepository obraRepo;
 
     @Autowired
-    public ObraService(ObraRepository obraRepo) {
+    public WorkService(WorkRepository obraRepo) {
         this.obraRepo = obraRepo;
     }
 
-    public List<Obra> findAll(){
+    public List<Work> findAll(){
         return obraRepo.findObras();
     }
 }

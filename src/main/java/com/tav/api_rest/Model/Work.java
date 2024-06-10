@@ -5,14 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Table(name = "DIS_MMNN_BWSR_00000100")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Obra {
+public class Work {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer  nodeId;

@@ -16,8 +16,14 @@ public class Obra {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer  nodeId;
+
+    @Column(name = "NodeName")
+    private String name;
+
     private Integer parentId;
+
     private String nodeName;
-    @OneToMany(mappedBy = "obra")
-    private List<Folder> folders;
+
+    /*@OneToMany(mappedBy = "obra")
+    private List<Folder> folders;*/
 }

@@ -15,10 +15,12 @@ public class Folder {
 
     //Relacionar con Jobs por RecID (de job)
     private Integer bwsrId;
-    @ManyToOne
+
+    /*@ManyToOne
     @JoinColumn(name = "RecID")
     private Obra obra;
+
     @OneToMany(mappedBy = "folder", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private List<Job> jobs;
+    private List<Job> jobs;*/
 }

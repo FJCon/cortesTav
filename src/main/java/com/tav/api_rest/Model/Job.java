@@ -29,10 +29,10 @@ public class Job {
     @Column(name = "JobName")
     private String info;
 
-    /*@ManyToOne
+    @ManyToOne
     @JoinColumn(name = "RecId") // columna de Job que es clave primaria, columna folder que es clave foranea
     @JsonBackReference
-    private Folder folder;*/
+    private Folder folder;
 
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference

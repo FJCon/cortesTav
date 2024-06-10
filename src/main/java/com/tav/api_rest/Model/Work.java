@@ -15,9 +15,6 @@ public class Work {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer  nodeId;
 
-    @Column(name = "NodeName")
-    private String name;
-
     private Integer parentId;
 
     private String nodeName;

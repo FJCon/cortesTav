@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,9 +23,14 @@ public class FolderController {
     public FolderController(FolderService folderServ) {
         this.folderServ = folderServ;
     }
+
     @GetMapping
     public ResponseEntity<List<Folder>> encontrarProyectos(){
         return ResponseEntity.ok(folderServ.findFolders());
 
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Folder>> encontrarPorId(@PathVariable Integer id){
+        return ResponseEntity.ok(folderServ.findByBwsrId(id));
     }
 }

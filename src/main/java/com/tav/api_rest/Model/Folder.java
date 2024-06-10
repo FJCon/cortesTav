@@ -2,25 +2,27 @@ package com.tav.api_rest.Model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "DIS_MMNN_BWSR_00000200")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Folder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RecID")
     private Integer id;
 
-    //Relacionar con Jobs por RecID (de job)
+    @Column(name = "BwsrID")
     private Integer bwsrId;
 
-    /*@ManyToOne
-    @JoinColumn(name = "RecID")
-    private Obra obra;
+    @OneToMany(mappedBy = "folder")
+    private List<Job> jobs;
 
-    @OneToMany(mappedBy = "folder", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
-    private List<Job> jobs;*/
 }

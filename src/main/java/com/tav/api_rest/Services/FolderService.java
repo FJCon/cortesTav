@@ -23,4 +23,8 @@ public class FolderService {
     public List<Folder> findFolders(){
         return folderRepo.findAll();
     }
+
+    public List<Folder> findByBwsrId(Integer id){
+        return folderRepo.findByBwsrId(id);
+    }
 }

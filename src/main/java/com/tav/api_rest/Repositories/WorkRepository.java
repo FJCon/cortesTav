@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface WorkRepository extends JpaRepository<Work, Integer> {
-    @Query("Select w from Work w where parentId=3")
+    @Query("Select w from Work w where parentId=3 order by w.nodeName")
     List<Work> findObras();
 }

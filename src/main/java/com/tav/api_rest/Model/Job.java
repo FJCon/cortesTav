@@ -1,5 +1,6 @@
 package com.tav.api_rest.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.databind.annotation.JsonTypeResolver;
 import jakarta.persistence.*;
@@ -27,6 +28,11 @@ public class Job {
 
     @Column(name = "JobName")
     private String info;
+
+    @ManyToOne
+    @JoinColumn(name = "RecId") // columna de Job que es clave primaria, columna folder que es clave foranea
+    @JsonBackReference
+    private Folder folder;
 
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference

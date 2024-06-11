@@ -1,0 +1,27 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #606060;
+    padding: 30px;
+    border-radius: 30px;
+
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+
+        & input{
+            height: 45px;
+            width: 300px;
+            margin: 10px;
+            font-size: 15px;
+        }
+
+        & button{
+            margin-top: 20px;
+        }
+    }
+}

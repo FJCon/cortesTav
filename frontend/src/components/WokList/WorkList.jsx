@@ -30,14 +30,16 @@ const WorkList = () => {
 
   return (
     <div className='worklist-container'>
-        <h2>Listado de Obras</h2>
-        <input type="text" placeholder='Buscar obra' onChange={handleChange}/>
+      <h2>Listado de Obras</h2>
+      <input type="text" placeholder='Buscar obra' onChange={handleChange}/>
+      <div className='cards-container'>
         { filtered.length == 0 ? 
         obras.map((obra) =>{
           return <Card id={obra.nodeId} name={obra.nodeName}/>}):
-        filtered.map((obra) =>{
-          return <Card id={obra.nodeId} name={obra.nodeName}/>})
-        }
+          filtered.map((obra) =>{
+            return <Card id={obra.nodeId} name={obra.nodeName}/>})
+            }
+      </div>
     </div>
   )
 }

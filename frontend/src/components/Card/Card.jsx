@@ -1,4 +1,5 @@
 import React from 'react'
+import './Card.css'
 
 const Card = ({ id, name}) => {
 
@@ -7,7 +8,7 @@ const Card = ({ id, name}) => {
         window.open("","_blank")
     }
   return (
-    <div key={id} onClick={handleClick}>
+    <div className='card-container' key={id} onClick={handleClick}>
         <p>{name}</p>
     </div>
   )

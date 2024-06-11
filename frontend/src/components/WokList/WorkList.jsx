@@ -1,29 +1,43 @@
 import React, { useEffect, useState } from 'react'
+import './WorkList.css'
 import url from '../../utils/url'
 import Card from '../Card/Card';
+
 
 const WorkList = () => {
 
   const [obras, setObras] = useState([]);
-  console.log(`${url.base}works`);
+  const [filtered, setFiltered] = useState([]);
+  console.log(`${url.base}/works`);
 
   const consulta = async ()=>{
-    const data = await fetch(`${url.base}works`);
+    const data = await fetch(`${url.base}/works`);
     const response = await data.json();
     setObras(response);
     
   }
   useEffect(()=>{
     consulta();
-    console.log(obras)
-    
-    
   },[])
+
+  const handleChange = (e)=>{
+    const input = e.target.value;
+    const filtrado = obras.filter(obra => obra.nodeName.toLowerCase().includes(input.toLowerCase()))
+    setFiltered(filtrado)
+    
+  }
+
+
   return (
-    <div>
-        <h2>Obras</h2>
-        {obras.map((obra) =>{
-          return <Card id={obra.nodeId} name={obra.nodeName}/>})}
+    <div className='worklist-container'>
+        <h2>Listado de Obras</h2>
+        <input type="text" placeholder='Buscar obra' onChange={handleChange}/>
+        { filtered.length == 0 ? 
+        obras.map((obra) =>{
+          return <Card id={obra.nodeId} name={obra.nodeName}/>}):
+        filtered.map((obra) =>{
+          return <Card id={obra.nodeId} name={obra.nodeName}/>})
+        }
     </div>
   )
 }

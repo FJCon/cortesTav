@@ -24,7 +24,7 @@ const JobList = () => {
 
   return (
     <>
-        <h2>JobList</h2>
+        <h2>Lista de Cortes</h2>
         <div>
           {jobs.map((job) => {return <JobCard key={job.id} name={job.jobs[0].info} />})}
         </div>

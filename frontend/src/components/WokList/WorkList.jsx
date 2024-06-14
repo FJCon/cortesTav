@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './WorkList.css'
 import url from '../../utils/url'
-import Card from '../Card/Card';
+import WorkCard from '../Card/WorkCard';
 
 
 const WorkList = () => {
@@ -35,9 +35,9 @@ const WorkList = () => {
       <div className='cards-container'>
         { filtered.length == 0 ? 
         obras.map((obra) =>{
-          return <Card id={obra.nodeId} name={obra.nodeName}/>}):
+          return <WorkCard id={obra.nodeId} name={obra.nodeName}/>}):
           filtered.map((obra) =>{
-            return <Card id={obra.nodeId} name={obra.nodeName}/>})
+            return <WorkCard id={obra.nodeId} name={obra.nodeName}/>})
             }
       </div>
     </div>

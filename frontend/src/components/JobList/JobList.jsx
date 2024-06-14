@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import url from '../../utils/url'
+import JobCard from '../Card/JobCard';
 
 const JobList = () => {
     
@@ -24,7 +25,9 @@ const JobList = () => {
   return (
     <>
         <h2>JobList</h2>
-        <p>longitud del array: {jobs.length}</p>
+        <div>
+          {jobs.map((job) => {return <JobCard key={job.id} name={job.jobs[0].info} />})}
+        </div>
     </>
     
   )

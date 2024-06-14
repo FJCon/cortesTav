@@ -16,7 +16,7 @@ import java.util.List;
 public class Folder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "RecID")
+    @Column(name = "RecordID")
     private Integer id;
 
     @Column(name = "BwsrID")

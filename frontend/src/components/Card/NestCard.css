@@ -1,0 +1,5 @@
+.nest-card{
+    & p{
+        color: black;
+    }
+}

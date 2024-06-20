@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import url from '../../utils/url'
 import JobCard from '../Card/JobCard';
+import  './JobList.css'
 
 const JobList = () => {
     
@@ -23,12 +24,12 @@ const JobList = () => {
     }, id)
 
   return (
-    <>
+    <div className='joblist-container'>
         <h2>Lista de Cortes</h2>
         <div>
-          {jobs.map((job) => {return <JobCard key={job.id} name={job.jobs[0].info} />})}
+          {jobs.map((job) => {return <JobCard key={job.id} id={job.id} name={job.jobs[0].info} array={job.jobs[0].nests} />})}
         </div>
-    </>
+    </div>
     
   )
 }

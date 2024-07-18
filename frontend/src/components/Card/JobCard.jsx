@@ -32,6 +32,14 @@ const JobCard = ({key, id, name, array }) => {
     <div className='job-container' id={id} key={key} onClick={clickHandle}>
       <p className='job-name'>{name}</p>  
       <div className={`${divNests} hidden`}>
+        <table>
+          <thead>
+
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
           {visibilitie ? nestsArray.map( (nest)=>{return <NestCard cnc={nest.cnc} />}  ) : ''}
       </div>
     </div>

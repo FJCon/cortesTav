@@ -1,5 +1,5 @@
 .card-container{
-    background-color:#707070;
+    background-color:#1989b9;
     padding: 12px 0px;
     margin: 7px;
     border-radius: 13px;
@@ -12,7 +12,7 @@
 }
 
 .card-container:hover{
-    background-color: #999999;
+    background-color: #0d5777;
     cursor: pointer;
     color: white;
 }

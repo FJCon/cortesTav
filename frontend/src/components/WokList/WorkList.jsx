@@ -31,7 +31,7 @@ const WorkList = () => {
   return (
     <div className='worklist-container'>
       <h2>Listado de Obras</h2>
-      <input type="text" placeholder='Buscar obra' onChange={handleChange}/>
+      <input type="text" placeholder='Filtrar obras' onChange={handleChange}/>
       <div className='cards-container'>
         { filtered.length == 0 ? 
         obras.map((obra) =>{

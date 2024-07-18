@@ -28,6 +28,10 @@
 
 }
 
+h3{
+    color: black;
+    padding: 20px;
+}
 
 .job-container.extended{
     width: 95vw;
@@ -51,4 +55,27 @@ p.job-name{
     
 }
 
+table{
+    width: 100%;
+}
+
+thead{
+    width: 100%; 
+}
+
+tbody{
+    width: 100%;
+}
+
+tr{
+    
+    & th{
+    color: black
+    }
+
+    & td{
+        color: black;
+        padding: 10px 0px;
+    }
+}
 

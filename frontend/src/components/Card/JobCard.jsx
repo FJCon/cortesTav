@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './JobCard.css'
 import NestCard from './NestCard';
+import Swal from 'sweetalert2';
 
 const JobCard = ({key, id, name, array }) => {
 
@@ -29,18 +30,34 @@ const JobCard = ({key, id, name, array }) => {
 
 
   return (
-    <div className='job-container' id={id} key={key} onClick={clickHandle}>
-      <p className='job-name'>{name}</p>  
+    <div className='job-container' id={id} key={key} >
+      <p className='job-name'onClick={clickHandle}>{name}</p>  
       <div className={`${divNests} hidden`}>
         <table>
+        {(visibilitie && nestsArray.length != 0) ?
           <thead>
-
-          </thead>
+              <tr>
+                <th>N° Nido</th>
+                <th>Cant. piezas</th>
+                <th>Fecha creacion</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+          </thead> : (visibilitie && nestsArray.length == 0) ? <h3>No hay nidos para mostrar</h3> : ''}
           <tbody>
-            
+            {visibilitie ? nestsArray.map( (nest)=>{return(
+              <tr>
+                <td>{nest.cnc}</td>
+                <td>{nest.part.length}</td>
+                <td>{nest.created.slice(0,10)}</td>
+                <td>{nest.data1 == '' ? 'Programado' : 
+                      nest.data1 != '' ? 'Cortado' : ''}</td>
+              </tr>
+              )}  ) : ''
+            }
           </tbody>
         </table>
-          {visibilitie ? nestsArray.map( (nest)=>{return <NestCard cnc={nest.cnc} />}  ) : ''}
+            {/*visibilitie ? nestsArray.map( (nest)=>{return <NestCard cnc={nest.cnc} />}  ) : ''*/}
       </div>
     </div>
 

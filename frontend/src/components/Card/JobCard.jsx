@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import './JobCard.css'
-import NestCard from './NestCard';
+import React, { useState } from 'react';
+import './JobCard.css';
+import NestRow from '../NestRow/NestRow';
 import Swal from 'sweetalert2';
 
 const JobCard = ({key, id, name, array }) => {
@@ -45,15 +45,7 @@ const JobCard = ({key, id, name, array }) => {
               </tr>
           </thead> : (visibilitie && nestsArray.length == 0) ? <h3>No hay nidos para mostrar</h3> : ''}
           <tbody>
-            {visibilitie ? nestsArray.map( (nest)=>{return(
-              <tr>
-                <td>{nest.cnc}</td>
-                <td>{nest.part.length}</td>
-                <td>{nest.created.slice(0,10)}</td>
-                <td>{nest.data1 == '' ? 'Programado' : 
-                      nest.data1 != '' ? 'Cortado' : ''}</td>
-              </tr>
-              )}  ) : ''
+            {visibilitie ? nestsArray.map( (nest)=>{return <NestRow nest={nest} /> }  ) : ''
             }
           </tbody>
         </table>

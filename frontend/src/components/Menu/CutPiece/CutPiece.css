@@ -1,0 +1,15 @@
+button{
+    padding: 15px 20px;
+    margin: 0px 15px;
+    font-size: 21px;
+    border: none;
+    border-radius: 8px;
+}
+
+.confirm{
+    background-color: #1ec71e;
+}
+
+img{
+    width: 60px;
+}

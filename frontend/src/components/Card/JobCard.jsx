@@ -39,7 +39,6 @@ const JobCard = ({key, id, name, array }) => {
               <tr>
                 <th>N° Nido</th>
                 <th>Cant. piezas</th>
-                <th>Fecha creacion</th>
                 <th>Estado</th>
                 <th>Acciones</th>
               </tr>

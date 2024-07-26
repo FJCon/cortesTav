@@ -13,11 +13,6 @@ const NestRow = ({ nest }) => {
     const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
 
     const [array, setArray] = useState(nest);
-    const [showSwal, setShowSwal] = useState(false);
-
-    const handleCloseSwal = ()=>{
-        setShowSwal(false);
-    }
 
     const MySwal = withReactContent(Swal);
     

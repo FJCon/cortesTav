@@ -14,6 +14,7 @@ public class Part {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "RecID")
     private Integer id;
+
     @ManyToOne
     @JoinColumn(name = "NstRef", referencedColumnName = "NstRef") // Ensure it references the correct column
     @JsonBackReference
@@ -24,5 +25,9 @@ public class Part {
 
     @Column(name="Quantity")
     private int quantity;
+
+    public Integer getNstId() {
+        return nest != null ? nest.getId() : null;
+    }
 
 }

@@ -1,0 +1,23 @@
+.menu-container{
+    width: 100vw;
+
+    & .options-container{
+        display: flex;
+        justify-content: center;
+        
+        
+
+        & .option{
+            background-color: #1989b9;
+            font-size: 22px;
+            padding: 40px 20px;
+            border-radius: 5px;
+            margin: 0px 15px;
+        }
+
+        & .option:hover{
+            background-color:  #0d5777;
+        }
+    }
+
+}

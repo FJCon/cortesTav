@@ -20,4 +20,8 @@ public class PartService {
     public List<Part> listParts() {
         return partRepo.findAll();
     }
+
+    public List<Part> listByNstId( Integer nstId ){
+        return partRepo.findByNstId(nstId);
+    }
 }

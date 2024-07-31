@@ -14,7 +14,7 @@ const CutPiece = ( {nestId, nestCnc, onClose} ) => {
   const day = hoy.getDate();
   const month = hoy.getMonth() + 1;
   const year = hoy.getFullYear();
-  const formatedDate = `${day}/${month}/${year}`;
+  const formatedDate = `${day}-${month}-${year}`;
 
   const confirm = ()=>{
 

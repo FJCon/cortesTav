@@ -16,6 +16,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --main-color: #1989b9;
+  --main-color-hover: #0d5777;
 }
 
 body {

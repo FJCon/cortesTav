@@ -25,7 +25,7 @@ const Menu = () => {
         <div className='options-container'>
             <Link to="/obras" className='option'>Lista de Obras</Link>
             <div className='option' onClick={handleClick}>Lista de nidos</div>
-            <div className='option' onClick={handleClick}>Lista de piezas</div>     
+            <Link to='/piezas ' className='option'>Lista de piezas</Link>     
         </div>
     </div>
   )

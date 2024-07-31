@@ -1,0 +1,32 @@
+
+
+table{
+    max-width: 1500px;
+    margin: auto;
+    border-collapse: collapse;
+    border-radius: 7px;
+    overflow: hidden;
+
+    
+
+    & thead{
+        background-color: var(--main-color);
+        border-top-left-radius: 10px;
+        & tr th{
+            padding: 15px 10px;
+            color: white;
+        }
+
+    }
+
+    & tbody{
+        & tr td{
+            color: white;
+            padding: 10px 25px;
+        }
+
+        & tr td.left{
+            text-align: start;
+        }
+    }
+}

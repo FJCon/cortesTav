@@ -1,6 +1,39 @@
 
+div.main-parts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    width: 95vw;
 
-table{
+
+    & div.filter-container{
+        padding: 20px 0px;
+        
+        & p{
+            font-size: 25px;
+        }
+
+        & input{
+            height: 40px;
+            width: 500px;
+            padding: 0px 20px;
+            font-size: 18px;
+            border: 0px;
+            border-radius: 5px;
+            color:black;
+            background-color: aliceblue;
+        }
+    }
+
+    & div.table-container{
+        width: 100%;
+        padding: 0px 0px 35px;
+    }
+
+}
+table.parts-table{
     max-width: 1500px;
     margin: auto;
     border-collapse: collapse;
@@ -21,8 +54,11 @@ table{
 
     & tbody{
         & tr td{
-            color: white;
+            color: black;
+            background-color: aliceblue;
             padding: 10px 25px;
+            border-bottom: 2px solid;
+            border-color: #a7a7a7b4;
         }
 
         & tr td.left{

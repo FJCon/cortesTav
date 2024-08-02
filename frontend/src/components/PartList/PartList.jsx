@@ -30,8 +30,8 @@ const PartList = () => {
   return (
     isLoading ? <Spinner/> :
     <div className='main-parts-container'>
-      <div className='filter-container'>
-        <p></p>
+      <div className='filter-container buscar'>
+        <h2>LISTAD DE PIEZAS</h2>
         <input type="text" placeholder='Buscar piezas' onChange={handleChange}/>
       </div>
       <div className='table-container'>

@@ -29,7 +29,7 @@ const WorkList = () => {
 
 
   return (
-    <div className='worklist-container'>
+    <div className='worklist-container buscar'>
       <h2>Listado de Obras</h2>
       <input type="text" placeholder='Filtrar obras' onChange={handleChange}/>
       <div className='cards-container'>

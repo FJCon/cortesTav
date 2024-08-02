@@ -15,16 +15,6 @@ div.main-parts-container{
             font-size: 25px;
         }
 
-        & input{
-            height: 40px;
-            width: 500px;
-            padding: 0px 20px;
-            font-size: 18px;
-            border: 0px;
-            border-radius: 5px;
-            color:black;
-            background-color: aliceblue;
-        }
     }
 
     & div.table-container{

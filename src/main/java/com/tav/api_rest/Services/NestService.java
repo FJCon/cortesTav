@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NestService {
@@ -24,4 +25,8 @@ public class NestService {
     public Nest findByCnc(String cnc){
         return nstRepo.findByCnc(cnc);
     }
+
+    public Optional<Nest> findById(Integer id){ return nstRepo.findById(id);}
+
+    public Nest saveNest(Nest nest){ return nstRepo.save(nest);}
 }

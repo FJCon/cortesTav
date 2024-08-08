@@ -29,5 +29,6 @@ public class Part {
     public Integer getNstId() {
         return nest != null ? nest.getId() : null;
     }
+    public Float getNstThickness(){return nest != null ? nest.getThickness() : null;}
 
 }

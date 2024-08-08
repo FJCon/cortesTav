@@ -20,7 +20,7 @@ const Menu = () => {
   return (
     <div className='menu-container'>
         <h2>
-            Hola username
+            Hola, username
         </h2>
         <div className='options-container'>
             <Link to="/obras" className='option'>Lista de Obras</Link>

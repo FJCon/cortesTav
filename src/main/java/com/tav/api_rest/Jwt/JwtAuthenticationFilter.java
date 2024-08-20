@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @Component
 //Extiende de una clase que se utiliza para crear filtros personalizados
-//Se utiliza para garantizar que el filtro se ejecuta 1 sola vez por peticion http.
+//OncePerRequestFilter: Se utiliza para garantizar que el filtro se ejecuta 1 sola vez por peticion http.
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
@@ -23,6 +23,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         final String token = getTokenFromRequest(request);
+
+        if(token == null){  //si el token es nulo, le cedemos el control al filtro.
+            filterChain.doFilter(request,response);
+            return;
+        }
+        filterChain.doFilter(request,response); //Llamamos al filtro para que siga con sus tareas
     }
 
     //Método para obtener token del request

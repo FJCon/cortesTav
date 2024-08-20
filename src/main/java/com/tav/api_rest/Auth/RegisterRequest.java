@@ -1,5 +1,6 @@
 package com.tav.api_rest.Auth;
 
+import com.tav.api_rest.Model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +15,5 @@ public class RegisterRequest {
     String password;
     String firstName;
     String lastName;
-    String rol;
+    Role rol;
 }
